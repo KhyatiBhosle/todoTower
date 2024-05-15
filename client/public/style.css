@@ -1,0 +1,338 @@
+/*----raisin-black: #21212Dff;
+--antiflash-white: #ECEDF1ff;
+--raisin-black-2: #2C2C38ff;
+--slate-blue: #6460C1ff;
+--slate-gray: #757D8Cff;
+#66E1AE
+#4CC2E6
+#8470F3--*/
+
+body{
+    background-color: #2C2C38;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#root, .dashboard{
+    width: 100vw;
+    height: 100vh;
+}
+
+.boards p:first-child{
+    font-size: smaller;
+    padding-bottom: 0px;
+    margin-bottom: 0px
+}
+
+h5{
+    margin: 0;
+    padding:0
+}
+.allBoards{
+    height: 100vh;
+    padding-left: 30px;
+    color:#757D8Cff;
+    overflow: scroll;
+}
+.brand{
+    color: white;
+    padding-top: 25px;
+}
+.boardName{
+    font-size: small;
+    padding: 10px;
+    margin: 5px 20px 5px 5px;
+    font-weight: 500;
+}
+.boardName:hover, .boardActive{
+    cursor: pointer;
+    background-color: #6460C1ff;
+    border-radius: 0px 150px 150px 0px;
+    color: white
+}
+.tasks{
+    overflow: scroll;
+}
+.addTask{
+    text-align: right;
+}
+.addTask .btn{
+    background-color: #6460C1ff;
+    color: white;
+    border-radius: 20px;
+    font-size: small;
+}
+
+.addTask .btn:hover{
+    font-weight: 500;
+}
+
+.header{
+    padding: 20px;
+}
+.items{
+    padding: 0px;
+}
+.items .tasks{
+    background-color: #21212Dff;
+    height: 89vh;
+    padding: 2%;
+}
+.status{
+    font-size:small;
+}
+.item{
+    background-color: #2C2C38;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.item:hover{
+    cursor: pointer;
+}
+.item p{
+    margin-bottom: 0px;
+}
+.item .itemTitle{
+    font-size: medium;
+}
+.item .itemSubtasks{
+    color: #757D8Cff;
+    font-size: small;
+}
+
+#To-Do{
+    color: #4CC2E6;
+}
+
+#Doing{
+    color: #8470F3;
+}
+
+#Done{
+    color: #66E1AE
+    
+}
+.task{
+    background-color: #2C2C38;
+    background-color: rgba(0 ,0, 0, 0.5);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    top: 0;
+    text-align: center;
+}
+
+.taskContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: #2C2C38;
+    opacity: 100%;
+    padding: 2% 3%;
+    text-align: left;
+    width: 33%;
+    max-height: 80%;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.taskContent p{
+    color: #757D8Cff;
+    font-size: small;
+}
+
+input, textarea, .form-select{
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px;
+    border: solid 0.5px #757D8Cff;
+    border-radius: 10px;
+    width: 100%;
+    font-size: small;
+    color: #757D8Cff;
+}
+.form-select{
+    color: white;
+}
+input::placeholder, textarea::placeholder{
+    font-size: small;
+    color: #757D8Cff
+}
+
+label{
+    font-size: small;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.taskContent button{
+    width: 100%;
+    border: 1px;
+    border-radius: 20px;
+    padding: 7px;
+    font-size: small;
+    font-weight: 500;
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.addSubtask span:hover{
+    cursor: pointer;
+}
+
+.addSubtaskbtn{
+    background-color: white;
+    color: #8470F3;
+    border: none;
+}
+
+.submit{
+    color: white;
+    background-color: #8470F3;
+    border: none;
+}
+
+.fa-xmark{
+    font-size: 20px;
+}
+
+.allSubtasks .row{
+   background-color: #21212Dff; 
+   margin-top: 10px;
+   padding: 10px;
+}
+.allSubtasks label{
+    margin:0px;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #2C2C38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    content:"\f00c";
+    color: white;
+    display: none;
+}
+input[type="checkbox"]:checked{
+    background-color: #8470F3;
+}
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.mobile{
+    display: none;
+}
+.hurrayParent{
+    padding:0;
+    width: 100%;
+}
+.hurray{
+    width: 100%;
+    background-color: transparent;
+    padding:0;
+}
+
+
+.hurrayChild{
+    background-color: transparent;
+    width: 80vw;
+    text-align: center;
+}
+
+.hurrayChild button{
+    background-color: #8470F3;
+    color: white;
+    padding: 10px 15px;
+    width: auto;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+    .mobile{
+        display:block;
+    }
+    .laptop{
+        display :none;
+    }
+    #root{
+        padding:1% 5%;
+    }
+    .items, .board{
+        flex: 0 0 auto;
+        width: 96%;
+        margin: 0;
+    }
+
+    .form-select{
+        display:inline;
+        width: 80%;
+        font-size: large;
+    }
+
+    .taskContent{
+        width: 80%;
+        padding: 5%;
+        border-radius: 5px;
+    }
+    .addTask{
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .tasks .col-12{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tasks button.mobile{
+        background-color: #8470F3;
+        color: white;
+        border: none;
+        padding: 7px;
+        border-radius: 5px;
+        font-size: small;
+    }
+    .hurrayParent{
+        padding:0;
+        height: 100% !important;
+        margin:0;
+        width: 100vw;
+    }
+
+    .hurray{
+        height: 100vh !important;
+        background-color: transparent;
+        padding:0;
+        margin:0;
+        width: 100vw;
+    }
+
+    .hurrayChild{
+        background-color: transparent;
+        width: 80vw;
+        text-align: center;
+    }
+}
