@@ -80,8 +80,8 @@ function App() {
       setHurray(true);
     }
 
-    axios.post("http://localhost:3001/changeTask", task).then(()=>{
-      axios.get('http://localhost:3001/api').then((list)=>{
+    axios.post("https://todotower.onrender.com/changeTask", task).then(()=>{
+      axios.get('https://todotower.onrender.com/api').then((list)=>{
         setList(list.data)
     }).catch((err)=>{
       console.log(err);
@@ -128,8 +128,8 @@ function App() {
   }
 
   const deleteTask = (id)=>{
-    axios.post("http://localhost:3001/delete", {id: id}).then(()=>{
-      axios.get('http://localhost:3001/api').then((list)=>{
+    axios.post("https://todotower.onrender.com/delete", {id: id}).then(()=>{
+      axios.get('https://todotower.onrender.com/api').then((list)=>{
         setList(list.data)
     }).catch((err)=>{
       console.log(err);
@@ -142,14 +142,14 @@ function App() {
   }
 
   function addNewTask(){
-    axios.post("http://localhost:3001/newTask", {
+    axios.post("https://todotower.onrender.com/newTask", {
       title: formData.title,
       description: formData.description,
       subtask: formData.subtasks,
       status: formData.status,
       board: activeBoard
     }).then(()=>{
-      axios.get('http://localhost:3001/api').then((list)=>{
+      axios.get('https://todotower.onrender.com/api').then((list)=>{
         setList(list.data)
     }).catch((err)=>{
       console.log(err);
@@ -174,7 +174,7 @@ function App() {
   }
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/api').then((list)=>{
+    axios.get('https://todotower.onrender.com/api').then((list)=>{
       setList(list.data)
     }).catch((err)=>{
       console.log(err);
